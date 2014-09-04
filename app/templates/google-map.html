@@ -1,0 +1,3 @@
+<google-map center="map.center" zoom="map.zoom" draggable="true" options="options" refresh="true" bounds="map.bounds" class="col-md-24">
+	<polygon static="true" ng-repeat="p in polygons track by p.id" fill="p.fill" path="p.path" stroke="p.stroke" visible='p.visible' fit="false" editable="p.editable" clickable="p.clickable" draggable="p.draggable" zindex="p.zindex" geodesic="p.geodesic"></polygon>
+</google-map>
