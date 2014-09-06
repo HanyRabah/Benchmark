@@ -9,6 +9,6 @@
  */
 angular.module('benchmarkAngularApp')
   .controller('homeCtrl', function ($scope) {
-    
+ 
 
   });

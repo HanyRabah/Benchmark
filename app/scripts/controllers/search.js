@@ -14,10 +14,5 @@ angular.module('benchmarkAngularApp')
         $scope.sideNav = { url: 'templates/side-nav.html'};
         $scope.googleMap = { url: 'templates/google-map.html'};
 
-
-
-
-
-
     });
 

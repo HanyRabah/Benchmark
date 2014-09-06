@@ -16,8 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'google-maps',
-     'mb-scrollbar'
+    'google-maps'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -37,11 +36,14 @@ angular
         templateUrl: 'views/search.html',
         controller: 'SearchCtrl'
       })
-      .when('/google', {
-        templateUrl: '../bower_components/angular-google-maps/example/example.html'
+      .when('/contact', {
+        templateUrl: 'views/contact.html'
       })
-       .when('/assets', {
-        templateUrl: '../bower_components/angular-google-maps/example/assets'
+       .when('/details', {
+        templateUrl: 'views/details.html'
+      })
+       .when('/sell', {
+        templateUrl: 'views/sell.html'
       })
       .otherwise({
         redirectTo: '/'

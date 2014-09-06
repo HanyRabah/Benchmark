@@ -10,14 +10,11 @@
 angular.module('benchmarkAngularApp')
     .controller('GoogleMapProjectsCtrl', function($scope, $rootElement, $location, $timeout) {
 
-        $('.google-map-container').height($(window).innerHeight());
-        google.maps.visualRefresh = true;
+         google.maps.visualRefresh = true;
 
 
 
         $scope.$on('handleMap', function(events, data, zoom) {
-
-            console.log(data[0] + '  ' + data[1] + '  ' + zoom);
             if (!zoom) {
                 zoom = 14
             };

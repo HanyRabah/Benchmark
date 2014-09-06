@@ -25,10 +25,10 @@ angular.module('benchmarkAngularApp')
                     details = {};
 
                 paper.setViewBox(0, 0, svgwidth, svgheight, true);
-                paper.canvas.setAttribute('preserveAspectRatio', 'none');
+                /*paper.canvas.setAttribute('preserveAspectRatio', 'none');
                 $(window).resize(function() {
                     paper.canvas.setAttribute('height', $(window).innerHeight());
-                });
+                });*/
                  var labelPath = function(pathObj, text, posx, posy, id, textStyle) {
                     var textObj = pathObj.paper.text(posx, posy, text).attr(textStyle);
                     textObj.node.id = id;

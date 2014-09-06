@@ -13,3 +13,8 @@ lib/model/doctrine/*Plugin/base/Base*
 lib/model/om/*
 lib/model/map/*
 web/*Plugin/*
+bower_components/
+node_modules/
+test/
+.sass-cache/
+.tmp/
