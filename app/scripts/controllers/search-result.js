@@ -9,7 +9,6 @@
  */
 angular.module('benchmarkAngularApp')
   .controller('SearchResultCtrl', function ($scope) {
-    var searchBox = $('.search-results');
-
-    searchBox.css('bottom', - searchBox.height());
+    var searchBox = $('.search-results-box');
+    	searchBox.css('bottom', - searchBox.height());
   });

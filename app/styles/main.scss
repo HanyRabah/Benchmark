@@ -231,7 +231,7 @@ body {
     padding: 19px;
 }
 
-.search-results {
+.search-results-box {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -245,9 +245,12 @@ body {
     }
     .search-loader {
         height: 100%;
+        width:100%;
         display: none;
     }
-    .search-filter {}
+    .search-filter {
+        margin:10px 0;
+    }
     .search-results-msg {}
     .search-results {
         position: relative;

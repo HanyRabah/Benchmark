@@ -13,6 +13,6 @@ angular.module('benchmarkAngularApp')
         $scope.searchResult = { url: 'templates/search-results.html'};
         $scope.sideNav = { url: 'templates/side-nav.html'};
         $scope.googleMap = { url: 'templates/google-map.html'};
-
+        
     });
 
