@@ -8,8 +8,8 @@
     <div class="col-md-4 col-md-offset-20">
         <div class="slide-animate" ng-include="sideNav.url" ng-controller="SideNavCtrl"></div>
     </div>
-    <div class="search-results-box">
-        <div class="slide-animate" ng-include="searchResult.url" ng-controller="SearchResultCtrl"></div>
+    <div class="search-results-box" ng-controller="SearchResultCtrl">
+        <div ng-include="searchResult.url" ></div>
     </div>
     <div class="slide-animate-container">
         <div class="slide-animate" ng-include="googleMap.url" ng-controller="GoogleMapProjectsCtrl"></div>

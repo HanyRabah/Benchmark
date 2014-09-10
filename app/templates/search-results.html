@@ -1,359 +1,362 @@
-<div class="col-sm-24">
-    <div class="search-toggle">
-        <button id="hideSearch" class="btn btn-primary"><i class="glyphicon glyphicon-chevron-down"></i> 
-        </button>
-    </div>
-    <div class="search-loader">
-        <img src="img/loader.gif" />
-        <br>
-        <p>be paitent while gathring info</p>
-    </div>
-    <div class="search-filter">
-        <div class="col-sm-24 search-query form-inline">
-            <div class="col-xs-24 col-sm-4">
-                <div class="form-group">
-                    <span id="query-type" class="search-query-title">New Properties in</span>
-                    <span id="query-location">
-                        <select class="form-control">
-                            <option>--All Districts--</option>
-                            <option>New Cairo</option>
-                            <option>North Cost</option>
-                            <option>Uptown Cairo</option>
-                            <option>Heliopolis</option>
-                            <option>Zamalek</option>
-                            <option>Zayed</option>
-                            <option>Maadi</option>
-                            <option>Red Sea</option>
-                        </select>
-                    </span>
-                </div>
-            </div>
-            <div class="col-xs-24 col-sm-4">
-                <div class="form-group">
-                    <span class="search-query-title">Type</span>
-                    <span id="query-typen">
-                        <select class="form-control">
-                            <option value="-1">--All Types--</option>
-                            <option value="4">Appartment</option>
-                            <option value="7">Challet</option>
-                            <option value="5">Duplex</option>
-                            <option value="6">Penthouse</option>
-                            <option value="8">Studio</option>
-                            <option value="3">Town house</option>
-                            <option value="2">Twin house</option>
-                            <option value="1">Villa</option>
-                        </select>
-                    </span>
-                </div>
-            </div>
-            <div class="col-xs-24 col-sm-4">
-                <div class="form-group">
-                    <span class="search-query-title">Project</span>
-                    <span id="query-project">
-                        <select class="form-control">
-                            <option value="-1">--All Projects--</option>
-                            <option>Asta La Vista</option>
-                            <option>-------</option>
-                            <option>xxxxxxxx</option>
-                            <option>%%</option>
-                        </select>
-                    </span>
-                </div>
-            </div>
-            <div class="col-xs-24 col-sm-6">
-                <div class="form-group">
-                    <span class="search-query-title">Price Range</span>
-                    <div class="rangeSliderWrapper">
-                        <div id="rangeSlider"></div>
-                    </div>
-                    <input id="lawPriceInput" name="input1" class="form-control lower">
-                    <input id="upPriceInput" name="input2" class="form-control Upper">
-
-                </div>
-            </div>
-            <div class="col-xs-24 col-sm-2">
-                <div class="form-group">
-                    <button type="submit" class="btn btn-info">Filter</button>
-                </div>
-            </div>
-
+   <div class="search-toggle">
+            <button  class="btn btn-primary" ng-click="showMe = !showMe"><i class="glyphicon glyphicon-chevron-down"></i> 
+            </button>
         </div>
-        <div class="search-results-msg">
-            <strong>We Found</strong>10,000 property Here!</div>
-    </div>
-    <div class="search-results row" mb-scrollbar="scrollbar('vertical', true)">
-        <ul class="col-sm-24 search-list clearfix">
-            <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/test-img.jpg" class="img-responsive" />
+<div class="search-slide-animate" ng-show="showMe">
+    <div class="col-sm-24">
+     
+        <div class="search-loader">
+            <img src="img/loader.gif" />
+            <br>
+            <p>be paitent while gathring info</p>
+        </div>
+         <div class="search-filter">
+            <div class="col-sm-24 search-query form-inline">
+                <div class="col-xs-24 col-sm-4">
+                    <div class="form-group">
+                        <span id="query-type" class="search-query-title">New Properties in</span>
+                        <span id="query-location">
+                            <select class="form-control">
+                                <option>--All Districts--</option>
+                                <option>New Cairo</option>
+                                <option>North Cost</option>
+                                <option>Uptown Cairo</option>
+                                <option>Heliopolis</option>
+                                <option>Zamalek</option>
+                                <option>Zayed</option>
+                                <option>Maadi</option>
+                                <option>Red Sea</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-24 col-sm-4">
+                    <div class="form-group">
+                        <span class="search-query-title">Type</span>
+                        <span id="query-typen">
+                            <select class="form-control">
+                                <option value="-1">--All Types--</option>
+                                <option value="4">Appartment</option>
+                                <option value="7">Challet</option>
+                                <option value="5">Duplex</option>
+                                <option value="6">Penthouse</option>
+                                <option value="8">Studio</option>
+                                <option value="3">Town house</option>
+                                <option value="2">Twin house</option>
+                                <option value="1">Villa</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-24 col-sm-4">
+                    <div class="form-group">
+                        <span class="search-query-title">Project</span>
+                        <span id="query-project">
+                            <select class="form-control">
+                                <option value="-1">--All Projects--</option>
+                                <option>Asta La Vista</option>
+                                <option>-------</option>
+                                <option>xxxxxxxx</option>
+                                <option>%</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-24 col-sm-6">
+                    <div class="form-group">
+                        <span class="search-query-title">Price Range</span>
+                        <div class="rangeSliderWrapper">
+                            <div id="rangeSlider"></div>
                         </div>
-                        <div class="item-footer">
+                        <input id="lawPriceInput" name="input1" class="form-control lower">
+                        <input id="upPriceInput" name="input2" class="form-control Upper">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
-
-                            <p class="item-price">1000,000
-                                <span>L.E</span>
-                            </p>
-                        </div>
-                    </a>
-
+                    </div>
+                </div>
+                <div class="col-xs-24 col-sm-2">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-info">Filter</button>
+                    </div>
                 </div>
 
-            </li>
-            <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/test-img.jpg" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+            </div>
+            <div class="search-results-msg">
+                <strong>We Found</strong>10,000 property Here!</div>
+        </div>
+        <div class="search-results row" mb-scrollbar="scrollbar('vertical', true)">
+            <ul class="col-sm-24 search-list clearfix">
+                <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/test-img.jpg" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">1000,000
+                                    <span>L.E</span>
+                                </p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/benchmark-noimg.png" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/test-img.jpg" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/test-img.jpg" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/benchmark-noimg.png" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/benchmark-noimg.png" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/test-img.jpg" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/test-img.jpg" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/benchmark-noimg.png" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/test-img.jpg" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="search-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/test-img.jpg" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/test-img.jpg" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/test-img.jpg" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/test-img.jpg" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/test-img.jpg" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/test-img.jpg" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/test-img.jpg" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/benchmark-noimg.png" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/test-img.jpg" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/test-img.jpg" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/benchmark-noimg.png" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/benchmark-noimg.png" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/test-img.jpg" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-            <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
-                <div class="item-wrapper">
-                    <a href="">
-                        <div class="item-image">
-                            <h4 class="item-title">Seasons - New Cairo</h4>
-                            <img src="img/benchmark-noimg.png" class="img-responsive" />
-                        </div>
-                        <div class="item-footer">
+                </li>
+                <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/benchmark-noimg.png" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
 
-                            <p>
-                                <strong>type:</strong>Villa</p>
+                                <p>
+                                    <strong>type:</strong>Villa</p>
 
-                            <p class="item-price">550K</p>
-                        </div>
-                    </a>
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
 
-                </div>
+                    </div>
 
-            </li>
-        </ul>
-        <div class="list-wrapper-loadmore">
-            Load More
+                </li>
+                <li class="property-list-item col-lg-4 col-md-5 col-sm-5 col-xs-16">
+                    <div class="item-wrapper">
+                        <a href="">
+                            <div class="item-image">
+                                <h4 class="item-title">Seasons - New Cairo</h4>
+                                <img src="img/benchmark-noimg.png" class="img-responsive" />
+                            </div>
+                            <div class="item-footer">
+
+                                <p>
+                                    <strong>type:</strong>Villa</p>
+
+                                <p class="item-price">550K</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </li>
+            </ul>
+            <div class="list-wrapper-loadmore">
+                Load More
+            </div>
         </div>
     </div>
 </div>
