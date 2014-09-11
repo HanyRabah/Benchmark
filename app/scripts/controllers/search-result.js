@@ -8,7 +8,6 @@
  * Controller of the benchmarkAngularApp
  */
 angular.module('benchmarkAngularApp')
-  .controller('SearchResultCtrl', function ($scope) {
-    var searchBox = $('.search-results-box');
-    	searchBox.css('bottom', - searchBox.height());
-  });
+    .controller('SearchResultCtrl', function($scope) {
+
+    })

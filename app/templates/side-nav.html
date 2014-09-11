@@ -29,7 +29,7 @@
                     </div>
                     <div class="navbar-collapse collapse sidebar-navbar-collapse">
                         <ul class="nav navbar-nav" id="sidenav01">
-                            <li ng-repeat="district in districts | filter:search">
+                            <li ng-repeat="district in districts | filter:search" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
                                 <a  data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed" ng-click="locationAtMap({{district.maplocation}})">
                                    {{ district.name }}
                                     <span class="caret pull-right"></span>
