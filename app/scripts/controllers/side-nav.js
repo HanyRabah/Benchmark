@@ -8,7 +8,8 @@
  * Controller of the benchmarkAngularApp
  */
 angular.module('benchmarkAngularApp')
-    .controller('SideNavCtrl', function($scope, $rootScope) {
+    .controller('SideNavCtrl', function($scope, $rootScope, $window) {
+
 
         $scope.districts = [{
             name: 'New Cairo',
@@ -380,9 +381,7 @@ angular.module('benchmarkAngularApp')
             }]
         }]
         $scope.locationAtMap = function(longlat, zoom){
-
             $rootScope.$broadcast('handleMap', longlat, zoom);
-
         };
 
 

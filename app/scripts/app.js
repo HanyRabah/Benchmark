@@ -16,7 +16,9 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'google-maps'
+    'ngMap',
+    'uiSlider',
+    'perfect_scrollbar'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,7 +26,7 @@ angular
         templateUrl: 'views/main.html',
         controller: 'homeCtrl'
       })
-      .when('/about', {
+      .when('/map', {
         templateUrl: 'views/benchmark_map.html',
         controller: 'BenchmarkMapCtrl'
       })

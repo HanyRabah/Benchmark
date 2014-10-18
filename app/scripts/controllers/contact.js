@@ -10,7 +10,7 @@
 angular.module('benchmarkAngularApp')
     .controller('ContactCtrl', function($scope) {
 
-      $scope.map = {
+      /*$scope.map = {
             center: {
                 latitude: '31.068815',
                 longitude: '28.22319'
@@ -31,5 +31,5 @@ angular.module('benchmarkAngularApp')
             },
             zoomControl: true,
             mapTypeId: google.maps.MapTypeId.SATELLITE
-        };
+        };*/
     });

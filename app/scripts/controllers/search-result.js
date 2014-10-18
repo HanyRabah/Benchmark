@@ -10,4 +10,6 @@
 angular.module('benchmarkAngularApp')
     .controller('SearchResultCtrl', function($scope) {
 
+ 
+        
     })

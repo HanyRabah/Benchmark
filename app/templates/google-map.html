@@ -1,3 +1,16 @@
-<google-map center="map.center" zoom="map.zoom" draggable="true" options="options" refresh="true" bounds="map.bounds" class="col-md-24">
-	<polygon static="true" ng-repeat="p in polygons track by p.id" fill="p.fill" path="p.path" stroke="p.stroke" visible='p.visible' fit="false" editable="p.editable" clickable="p.clickable" draggable="p.draggable" zindex="p.zindex" geodesic="p.geodesic"></polygon>
-</google-map>
+<!-- <google-map id="google-map-content" center="map.center" zoom="map.zoom" draggable="true" refresh="true" bounds="map.bounds" pan="map.pan" class="col-md-24 angular-google-map-wrapper">
+	<polygon ng-click="callSearch()" static="true" ng-repeat="p in polygons track by p.id" fill="p.fill" path="p.path" stroke="p.stroke" visible='p.visible' fit="false" editable="p.editable" clickable="p.clickable" draggable="p.draggable" zindex="p.zindex" geodesic="p.geodesic"></polygon>
+</google-map> -->
+
+<map zoom="{{ map.zoom }}" center="{{map.center.latitude }} {{ map.center.longitude  }}" pan="{{ map.pan }}"  refresh ="{{ map.refresh }}"  
+bounds="{{ map.bounds }}" options=" {{ map.options }}" class="angular-google-map-container">
+   
+    <shape ng-repeat="p in polygons track by p.id" name="polygon" 
+    stroke-color=" {{ p.stroke.color }}" 
+    draggable="{{ p.draggable }}"
+    fill="{{ p.fill }}" 
+    path="{{ p.path }}" 
+    stroke="{{ p.stroke.weight }}" 
+    on-click="projectInfo({{ p.info }})"
+    class="ng-scope"></shape>
+</map>

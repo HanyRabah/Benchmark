@@ -13,7 +13,10 @@
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
     "raphael": "~2.1.2",
-    "angular-google-maps": "~1.2.1"
+    "ngmap": "~0.17.3",
+    "angular-slider": "~0.2.3",
+    "ng-scrollbar": "~0.0.5",
+    "angular-perfect-scrollbar": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
